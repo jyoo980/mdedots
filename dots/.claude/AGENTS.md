@@ -84,3 +84,7 @@ The syntax rules for Claude Code `settings.json` files are explained in file ~/w
 ## Browsers
 
 When the user asks to browse to a URL, don't put in it a LLM-specific tab group.  Just use `xdg-open`.
+
+## Handwriting recognition
+
+There are notes about reading my handwriting in file `~/.claude/ocr-handwriting-notes.md`.
