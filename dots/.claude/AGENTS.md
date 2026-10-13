@@ -11,6 +11,7 @@
 * Do not expand contractions, but do not introduce them either.
 * Retain the fences (three backticks) around fenced code blocks.
 * Use technical writing conventions; for example, punctuation is written inside quotation marks if it belongs to the quote, and punctuation is written outside quotation marks if it belongs to the larger sentence.
+* When editing, fix errors and clumsiness, but do not trade emphasis or precision for brevity.
 
 ### LaTeX
 
