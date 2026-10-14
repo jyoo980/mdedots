@@ -1818,6 +1818,15 @@ the resulting `recompile' would compete with the new compilation.")
 (advice-add 'ros--recompile-on-save :before-until
             #'ros--recompile-on-save--unless-compiling)
 
+(defun ros--recompile-on-save--always-kill (orig-fun &rest args)
+  "Call ORIG-FUN on ARGS, killing any running compilation without asking.
+The running compilation is for an earlier version of the file, so its
+results are about to be obsolete."
+  (let ((compilation-always-kill t))
+    (apply orig-fun args)))
+(advice-add 'ros--recompile-on-save :around
+            #'ros--recompile-on-save--always-kill)
+
 ;; Like `recompile-on-save-advice', but that macro uses the obsolete
 ;; variable `compilation-last-buffer'.
 (defun compile--recompile-on-save (orig-fun &rest args)
