@@ -19,9 +19,8 @@
 
 ### Conventions for numbers
 
-* It is permissible to use digits, such as “there were 3 blind mice”.
-* A 4-digit number does not require a comma; “2093” is acceptable.
-* Do not place commas within numbers in LaTeX tables.
+* It is permissible to use digits, such as “there were 3 blind mice”.  Do not change from digits to words.
+* Do not add or remove commas from a number with 4+ digits; that is, both “2093” and “2093” are acceptable.
 
 ## Programming
 
