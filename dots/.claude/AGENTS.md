@@ -41,6 +41,7 @@ If a directory is named `<reponame>-fork-<orgname>...`, then it must contain `<o
 
 * When reviewing code, do not complain about an empty pull request description.
 * Number every code review finding sequentially.  Never renumber findings.
+* When findings are presented out of numeric order (for example, grouped by severity), do not use Markdown ordered-list syntax (`1.`), because renderers renumber list items.  Write each number as literal text instead, such as `- **8.** ...`.
 * When I respond to your code review, "disregard finding 7" does *not* mean that I accept the others and want you to address them.  It is about that one finding specifically. <!-- Relevant to Codex. -->
 * When addressing a code review finding, always consider whether there is a better fix than the one(s) suggested.
 * When reporting code review findings, call out ones that are low-value or unlikely.
