@@ -1,4 +1,12 @@
 {
+  "env": {
+    "CLAUDE_CODE_SCROLL_SPEED": "4"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
   "permissions": {
     "allow": [
       "Agent(*)",
@@ -83,14 +91,11 @@
       "WebSearch(*)",
       "Write(*)"
     ],
-    "deny": ["Bash(git switch)", "Bash(git switch:*)"],
+    "deny": [
+      "Bash(git switch)",
+      "Bash(git switch:*)"
+    ],
     "ask": []
-  },
-  "agentPushNotifEnabled": true,
-  "attribution": {
-    "commit": "",
-    "pr": "",
-    "sessionUrl": false
   },
   "enabledPlugins": {
     "clangd-lsp@claude-plugins-official": true,
@@ -105,8 +110,6 @@
     "rust-analyzer-lsp@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
   },
-  "inputNeededNotifEnabled": true,
-  "skipDangerousModePermissionPrompt": true,
   "spinnerVerbs": {
     "mode": "replace",
     "verbs": [
@@ -115,10 +118,14 @@
       "Working"
     ]
   },
+  "tui": "fullscreen",
   "voice": {
     "enabled": true,
     "mode": "hold"
   },
+  "skipDangerousModePermissionPrompt": true,
   "theme": "auto",
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
   "voiceEnabled": true
 }
