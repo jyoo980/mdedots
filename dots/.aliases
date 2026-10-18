@@ -770,11 +770,16 @@ crreview() {
         return 1
         ;;
     esac
-    # shellcheck disable=SC2016 # "$1" is expanded by the inner shell, not by this one
-    nohup bash -c 'sleep "$1" && gh pr comment --body "@coderabbitai review"' bash "$1" > /dev/null 2>&1 &
+  fi
+  # Find the PR now, so that an error is reported rather than discarded by the background job.
+  local url
+  url=$(gh pr view --json url --jq .url) || return 1
+  if [ "$#" -eq 1 ]; then
+    # shellcheck disable=SC2016 # "$1" and "$2" are expanded by the inner shell, not by this one
+    nohup bash -c 'sleep "$1" && gh pr comment "$2" --body "@coderabbitai review"' bash "$1" "$url" > /dev/null 2>&1 &
     return 0
   fi
-  gh pr comment --body "@coderabbitai review"
+  gh pr comment "$url" --body "@coderabbitai review"
 }
 
 ### JSON
