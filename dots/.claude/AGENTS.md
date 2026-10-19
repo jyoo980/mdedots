@@ -5,6 +5,12 @@
 * Before responding to a user query, re-read any files that you previously read but have changed since then.
 * When asked to write a file, default to writing it in the current directory, not under `/tmp/`.
 
+## Shell commands
+
+* Avoid writing or running commands that require my approval; write an equivalent that does not.  For example:
+  * Instead of `rm`, write to a fresh scratch directory or overwrite the file.
+  * Instead of `cd dir && cmd`, use absolute paths or the tool's own directory option (`make -C`, `git -C`).
+
 ## English text
 
 * Never replace concrete nouns by pronouns.  (But you do not have to replace every pronoun by a noun.)
