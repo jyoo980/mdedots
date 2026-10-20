@@ -3,7 +3,7 @@
 ## Files on disk
 
 * Before responding to a user query, re-read any files that you previously read but have changed since then.
-* When asked to write a file, default to writing it in the current directory, not under `/tmp/`.
+* When asked to write a file or create a document, write it in the current directory.  Do not write it under `/tmp/`, and do not create a cloud document, unless explicitly instructed.
 
 ## Shell commands
 
